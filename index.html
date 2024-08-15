@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um catálogo de sobremesas com imagens, descrição e preço">
+    <link rel="shortcut icon" href="assets/images/logo4.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        Red100: "#c73a0f",
+                        RedOpacity: "#e67e5e",
+                        Green: "#1ea475",
+                        Rose50: "#fcf9f7",
+                        Rose100: "#f4edeb",
+                        Rose300: "#c9aea6",
+                        Rose400: "#ad8985",
+                        Rose500: "#87635a",
+                        Rose700: "#87635a",
+                        Rose900: "#260f08",
+                        bgColor: "#1E2B3C",
+                    },
+                    fontFamily: {
+                        RedHatText: "Red Hat Text",
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Frontend Flavours</title>
+</head>
+<body class="bg-Rose50 font-RedHatText">
+    <header class="sticky top-0 z-[1]">
+        <nav class="bg-Rose100 relative">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <figure class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="assets/images/logo4.png" alt="" class="h-10">
+                    <figcaption class="self-center text-2xl font-semibold whitespace-nowrap">Frontend Flavours</figcaption>
+                </figure>
+                
+                    
+                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center w-[30px] h-[30px] justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-Rose300 focus:outline-none focus:ring-2 focus:ring-Rose300" aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <label for="checkbox-menu">
+                        <img src="assets/images/hamburguer-menu.svg" alt="" class="cursor-pointer">
+                    </label>
+                </button>
+                <input type="checkbox" name="checkbox-menu" id="checkbox-menu" class="hidden peer">
+
+                <div class="hidden peer-checked:block w-full text-center bg-Rose300 border-none absolute right-0 top-[72px]
+                md:block md:w-fit md:bg-Rose100 md:static md:w-auto" id="navbar-default">
+                    <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:gap-4 rtl:space-x-reverse md:mt-0 md:border-0">
+                        <li>
+                            <a href="sobre.html" target="_self" class="block py-2 px-3 text-[1.1rem] text-gray-900 transition duration-300 rounded hover:bg-gray-100 md:hover:bg-Red100 md:hover:text-Rose50">Catálogo</a>
+                        </li>
+                        <li>
+                            <a href="sobre.html" target="_self" class="block py-2 px-3 text-[1.1rem] text-gray-900 transition duration-300 rounded hover:bg-gray-100 md:hover:bg-Red100 md:hover:text-Rose50">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="cadastrar-sobremesa.html" target="_self" class="block py-2 px-3 text-[1.1rem] text-gray-900 transition duration-300 rounded hover:bg-gray-100 md:hover:bg-Red100 md:hover:text-Rose50">Cadastre sua sobremesa</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <main class="py-[1.25rem] px-[1.5rem] flex flex-wrap justify-center md:py-[2rem] md:px-[1rem] md:flex-row md:gap-[9.rem] md:items-start">
+        <section>
+            <h1 class="text-[2.5rem] font-black text-center">Catálogo de sobremesas</h1>
+            <ul class="list-none flex flex-wrap justify-center gap-[1.5rem] py-[1.85rem] px-0">
+
+                <li class="flex flex-col max-w-[327px] md:max-w-[250px]">
+                    <div class="flex flex-col items-center relative">
+                        <figure class="flex flex-col gap-[1.5rem]">
+                            <picture>
+                                <source media="(min-width: 846px)" srcset="assets/images/image-waffle-desktop.jpg" type="image/jpg" />
+                                <img src="assets/images/image-waffle-mobile.jpg" alt="" class="w-[100%] rounded-[10px]" />
+                            </picture>
+                            <figcaption class="text-[1rem] text-Rose400">Waffle CSS</figcaption>
+                        </figure>
+                        <div class="border-[1px] border-Red100 rounded-full bg-Rose50 text-[.9rem] absolute bottom-[30px] min-w-[150px]">
+                            <button class="py-[.7rem] px-[1.8rem] bg-transparent border-none flex items-center gap-[.5rem] cursor-pointer font-semibold text-[.8rem] hover:text-Red100 transition duration-300">
+                                <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart button" />
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-[1rem] font-medium text-Rose900">Um waffle estiloso</p>
+                        <span class="text-Red100 font-semibold">R$ 6.50</span>
+                    </div>
+                </li>
+
+                <li class="flex flex-col max-w-[327px] md:max-w-[250px]">
+                    <div class="flex flex-col items-center relative">
+                        <figure class="flex flex-col gap-[1.5rem]">
+                            <picture>
+                                <source media="(min-width: 846px)" srcset="assets/images/image-creme-brulee-desktop.jpg" type="image/jpg" />
+                                <img src="assets/images/image-creme-brulee-mobile.jpg" alt="" class="w-[100%] rounded-[10px]" />
+                            </picture>
+                            <figcaption class="text-[1rem] text-Rose400">Creme Bruleé JavaScript</figcaption>
+                        </figure>
+                        <div class="border-[1px] border-Red100 rounded-full bg-Rose50 text-[.9rem] absolute bottom-[30px] min-w-[150px]">
+                            <button class="py-[.7rem] px-[1.8rem] bg-transparent border-none flex items-center gap-[.5rem] cursor-pointer font-semibold text-[.8rem] hover:text-Red100 transition duration-300">
+                                <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart button" />
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-[1rem] font-medium text-Rose900">Um loop de sabores</p>
+                        <span class="text-Red100 font-semibold">R$ 7.00</span>
+                    </div>
+                </li>
+
+                <li class="flex flex-col max-w-[327px] md:max-w-[250px]">
+                    <div class="flex flex-col items-center relative">
+                        <figure class="flex flex-col gap-[1.5rem]">
+                            <picture>
+                                <source media="(min-width: 846px)" srcset="assets/images/image-macaron-desktop.jpg" type="image/jpg" />
+                                <img src="assets/images/image-macaron-mobile.jpg" alt="" class="w-[100%] rounded-[10px]" />
+                            </picture>
+                            <figcaption class="text-[1rem] text-Rose400">Macarons HTML</figcaption>
+                        </figure>
+                        <div class="border-[1px] border-Red100 rounded-full bg-Rose50 text-[.9rem] absolute bottom-[30px] min-w-[150px]">
+                            <button class="py-[.7rem] px-[1.8rem] bg-transparent border-none flex items-center gap-[.5rem] cursor-pointer font-semibold text-[.8rem] hover:text-Red100 transition duration-300">
+                                <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart button" />
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-[1rem] font-medium text-Rose900">Semanticamente deliciosos</p>
+                        <span class="text-Red100 font-semibold">R$ 8.00</span>
+                    </div>
+                </li>
+
+                <li class="flex flex-col max-w-[327px] md:max-w-[250px]">
+                    <div class="flex flex-col items-center relative">
+                        <figure class="flex flex-col gap-[1.5rem]">
+                            <picture>
+                                <source media="(min-width: 846px)" srcset="assets/images/image-tiramisu-desktop.jpg" type="image/jpg" />
+                                <img src="assets/images/image-tiramisu-mobile.jpg" alt="" class="w-[100%] rounded-[10px]" />
+                            </picture>
+                            <figcaption class="text-[1rem] text-Rose400">Tiramisu React</figcaption>
+                        </figure>
+                        <div class="border-[1px] border-Red100 rounded-full bg-Rose50 text-[.9rem] absolute bottom-[30px] min-w-[150px]">
+                            <button class="py-[.7rem] px-[1.8rem] bg-transparent border-none flex items-center gap-[.5rem] cursor-pointer font-semibold text-[.8rem] hover:text-Red100 transition duration-300">
+                                <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart button" />
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-[1rem] font-medium text-Rose900">Se atualiza a cada mordida</p>
+                        <span class="text-Red100 font-semibold">R$ 5.50</span>
+                    </div>
+                </li>
+
+                <li class="flex flex-col max-w-[327px] md:max-w-[250px]">
+                    <div class="flex flex-col items-center relative">
+                        <figure class="flex flex-col gap-[1.5rem]">
+                            <picture>
+                                <source media="(min-width: 846px)" srcset="assets/images/image-baklava-desktop.jpg" type="image/jpg" />
+                                <img src="assets/images/image-baklava-mobile.jpg" alt="" class="w-[100%] rounded-[10px]" />
+                            </picture>
+                            <figcaption class="text-[1rem] text-Rose400">Baklava SASS</figcaption>
+                        </figure>
+                        <div class="border-[1px] border-Red100 rounded-full bg-Rose50 text-[.9rem] absolute bottom-[30px] min-w-[150px]">
+                            <button class="py-[.7rem] px-[1.8rem] bg-transparent border-none flex items-center gap-[.5rem] cursor-pointer font-semibold text-[.8rem] hover:text-Red100 transition duration-300">
+                                <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart button" />
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-[1rem] font-medium text-Rose900">Estilo e sabor em outro nível</p>
+                        <span class="text-Red100 font-semibold">R$ 4.00</span>
+                    </div>
+                </li>
+
+                <li class="flex flex-col max-w-[327px] md:max-w-[250px]">
+                    <div class="flex flex-col items-center relative">
+                        <figure class="flex flex-col gap-[1.5rem]">
+                            <picture>
+                                <source media="(min-width: 846px)" srcset="assets/images/image-meringue-desktop.jpg" type="image/jpg" />
+                                <img src="assets/images/image-meringue-mobile.jpg" alt="" class="w-[100%] rounded-[10px]" />
+                            </picture>
+                            <figcaption class="text-[1rem] text-Rose400">Torta Tailwind</figcaption>
+                        </figure>
+                        <div class="border-[1px] border-Red100 rounded-full bg-Rose50 text-[.9rem] absolute bottom-[30px] min-w-[150px]">
+                            <button class="py-[.7rem] px-[1.8rem] bg-transparent border-none flex items-center gap-[.5rem] cursor-pointer font-semibold text-[.8rem] hover:text-Red100 transition duration-300">
+                                <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart button" />
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-[1rem] font-medium text-Rose900">Ágil e levemente saborosa</p>
+                        <span class="text-Red100 font-semibold">R$ 5.00</span>
+                    </div>
+                </li>
+
+                <li class="flex flex-col max-w-[327px] md:max-w-[250px]">
+                    <div class="flex flex-col items-center relative">
+                        <figure class="flex flex-col gap-[1.5rem]">
+                            <picture>
+                                <source media="(min-width: 846px)" srcset="assets/images/image-cake-desktop.jpg" type="image/jpg" />
+                                <img src="assets/images/image-cake-mobile.jpg" alt="" class="w-[100%] rounded-[10px]" />
+                            </picture>
+                            <figcaption class="text-[1rem] text-Rose400">Bolo DOM</figcaption>
+                        </figure>
+                        <div class="border-[1px] border-Red100 rounded-full bg-Rose50 text-[.9rem] absolute bottom-[30px] min-w-[150px]">
+                            <button class="py-[.7rem] px-[1.8rem] bg-transparent border-none flex items-center gap-[.5rem] cursor-pointer font-semibold text-[.8rem] hover:text-Red100 transition duration-300">
+                                <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart button" />
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-[1rem] font-medium text-Rose900">Manipula o seu paladar</p>
+                        <span class="text-Red100 font-semibold">R$ 4.50</span>
+                    </div>
+                </li>
+
+                <li class="flex flex-col max-w-[327px] md:max-w-[250px]">
+                    <div class="flex flex-col items-center relative">
+                        <figure class="flex flex-col gap-[1.5rem]">
+                            <picture>
+                                <source media="(min-width: 846px)" srcset="assets/images/image-brownie-desktop.jpg" type="image/jpg" />
+                                <img src="assets/images/image-brownie-mobile.jpg" alt="" class="w-[100%] rounded-[10px]" />
+                            </picture>
+                            <figcaption class="text-[1rem] text-Rose400">Brownie BootStrap</figcaption>
+                        </figure>
+                        <div class="border-[1px] border-Red100 rounded-full bg-Rose50 text-[.9rem] absolute bottom-[30px] min-w-[150px]">
+                            <button class="py-[.7rem] px-[1.8rem] bg-transparent border-none flex items-center gap-[.5rem] cursor-pointer font-semibold text-[.8rem] hover:text-Red100 transition duration-300">
+                                <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart button" />
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-[1rem] font-medium text-Rose900">Se adatpa a qualquer ocasião</p>
+                        <span class="text-Red100 font-semibold">R$ 4.50</span>
+                    </div>
+                </li>
+
+                <li class="flex flex-col max-w-[327px] md:max-w-[250px]">
+                    <div class="flex flex-col items-center relative">
+                        <figure class="flex flex-col gap-[1.5rem]">
+                            <picture>
+                                <source media="(min-width: 846px)" srcset="assets/images/image-panna-cotta-desktop.jpg" type="image/jpg" />
+                                <img src="assets/images/image-panna-cotta-mobile.jpg" alt="" class="w-[100%] rounded-[10px]" />
+                            </picture>
+                            <figcaption class="text-[1rem] text-Rose400">Panna Cotta Typescript</figcaption>
+                        </figure>
+                        <div class="border-[1px] border-Red100 rounded-full bg-Rose50 text-[.9rem] absolute bottom-[30px] min-w-[150px]">
+                            <button class="py-[.7rem] px-[1.8rem] bg-transparent border-none flex items-center gap-[.5rem] cursor-pointer font-semibold text-[.8rem] hover:text-Red100 transition duration-300">
+                                <img src="assets/images/icon-add-to-cart.svg" alt="Add to cart button" />
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-[1rem] font-medium text-Rose900">Sobremesa tipo: apetitosa</p>
+                        <span class="text-Red100 font-semibold">R$ 4.50</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="text-center p-8 bg-Rose300 text-Rose900 text-2xl flex flex-col items-center gap-8 md:flex-row md:gap-3 md:justify-between">
+        <p>Desenvolvido por
+            <a class="text-Rose900 p-2 rounded transition duration-300 hover:bg-Rose50 hover:text-gray-900" href="https://github.com/danielmrz-dev" target="_blank">Daniel Mariz</a>
+        </p>
+
+        <ul class="flex flex-col gap-8 items-center md:flex-row md:gap-3">
+            <li>
+                <a class="text-Rose900 p-2 rounded transition duration-300 hover:bg-Rose50 hover:text-gray-900" href="https://github.com/danielmrz-dev">Github</a>
+            </li>
+            <li>
+                <a class="text-Rose900 p-2 rounded transition duration-300 hover:bg-Rose50 hover:text-gray-900" href="https://github.com/danielmrz-dev">LinkedIn</a>
+            </li>
+            <li>
+                <a class="text-Rose900 p-2 rounded transition duration-300 hover:bg-Rose50 hover:text-gray-900" href="https://github.com/danielmrz-dev">Twitter</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
